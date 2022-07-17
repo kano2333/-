@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>二分法とニュートン法</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" charset="UTF-8"
+        src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+</head>
+<style>
+    .flex {
+        display: flex;
+        padding: 1px;
+        border: 1px solid #ffffff;
+        background: #ffffff;
+    }
+
+    .flex>div {
+        margin: 10px;
+        border: 1px solid #ffffff;
+        padding: 50px;
+        background: #ffffff;
+    }
+</style>
+
+<body>
+    <h1>Dichotomy ＆ Newton's method</h1>
+    <div class="flex between">
+        <div class="box box1">
+            <h2>Dichotomy</h2>
+            <form>
+                <label for="curve">functiion: </label>
+                <select id="curve">
+                    <option value="1">x&sup3; ＋ x － 1</option>
+                    <option value="2">x&sup2;－ x － 3</option>
+                    <option value="3">x&sup3;－ 2x － 2</option>
+                </select>
+                <input type="button" id="button6" value="select" onclick="clickbutton6()" />
+                <p>Enter the value of "a"<span id="span"></span></span></p>
+                <p> a=<input type="number" id="number" value="" />
+                    <input type="button" id="button" value="confirm" onclick="clickbutton()" />
+                </p>
+                <p>Enter the value of "b"<span id="span2"></span></p>
+                <p> b=<input type="number" id="number2" value="" />
+                    <input type="button" id="button2" value="confirm" onclick="clickbutton2()" />
+                </p>
+                <input type="button" id="button4" value="start" onclick="clickbutton4()" />
+                <input type="button" id="button7" value="reset" onclick="clickbutton7()" />
+                <br>
+                <table border="1">
+                    <tr>
+                        <th>Number of Trials</th>
+                        <th>Value of X</th>
+                    </tr>
+                    <tr>
+                        <th><span id="span4"></span></th>
+                        <th><span id="span5"></span></th>
+                    </tr>
+                </table>
+            </form>
+            <br>
+            <div id="jxgbox" class="jxgbox" style="width:500px; height:500px"></div>
+            <script src="nibun.js" defer></script>
+        </div>
+
+
+        <div class="box box2">
+            <h2>Newton's method</h2>
+            <form>
+                <label for="curve">function: </label>
+                <select id="curve2">
+                    <option value="4">x&sup3; ＋ x － 1</option>
+                    <option value="5">x&sup2;－ x － 3</option>
+                    <option value="6">x&sup3;－ 2x － 2</option>
+                </select>
+                <input type="button" id="button8" value="select" onclick="clickbutton8()" />
+                <p>Enter the value of "c"<span id="span3"></span></p>
+                <p> c=<input type="number" id="number3" value="" />
+                    <input type="button" id="button3" value="confirm" onclick="clickbutton3()" />
+                </p>
+                <br>
+                <br>
+                <br>
+                <span id="span5"></span>
+                <input type="button" id="button5" value="start" onclick="clickbutton5()" />
+                <input type="button" id="button9" value="reset" onclick="clickbutton9()" />
+                <br>
+                <table border="2">
+                    <tr>
+                        <th>Number of Trials</th>
+                        <th>Value of X</th>
+                    </tr>
+                    <tr>
+                        <th><span id="span6"></span></th>
+                        <th><span id="span7"></span></th>
+                    </tr>
+                </table>
+            </form>
+            <br>
+            <div id="jxgbox2" class="jxgbox" style="width:500px; height:500px"></div>
+            <script src="newton.js" defer></script>
+        </div>
+    </div>
+</body>
+</html>
